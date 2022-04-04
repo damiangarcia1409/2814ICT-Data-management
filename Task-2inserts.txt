@@ -1,0 +1,104 @@
+INSERT INTO LANGUAGE
+	(LanguageCode, LanguageName)
+VALUES
+('A1','English'),
+('A2','Spanish'),
+('A3','Chinese'),
+('A4','French'),
+('A5','Bengali');
+
+INSERT INTO COUNTRY
+	(CountryCode, CountryName)
+VALUES
+('B1','Australia'),
+('B2','United States of America'),
+('B3','China'),
+('B4','France'),
+('B5','Bangladesh');
+
+
+INSERT INTO COUNTRY_LANGUAGE
+	(CountryCode, LanguageCode)
+VALUES
+
+INSERT INTO LOCATION
+	(StreetNo, StreetName, City, LocationTypeID)
+VALUES
+('32','Albert','Brisbane','01'),
+('24','Queen','Sydney','02'),
+('09','Milton','Adelaide','03'),
+('32','Toowong','Melbourne','04'),
+('32','Springfield','Perth','05');
+
+INSERT INTO LOCATION_TYPE
+	(LocTypeID, LocTypeDescription)
+VALUES
+('01','Hotel'),
+('02','Gymnasium'),
+('03','Stadium/Arena'),
+('04','Shopping-mall'),
+('05','Restaurant');
+
+INSERT INTO DRIVER
+	(DriverLicenceNum, Driver FirstName, ClearanceLevel, IsAvailable)
+VALUES
+('GB894571','John','Smith','Clear','Available'),
+('BN793484','Frank','Josh','Clear','Available'),
+('SP190239','Denver','Huges','Not-Clear','Available'),
+('CH792793','Sam','Farr','Clear','Not-Avaiable'),
+('AU927991','Andrew','Stevens','Not-Clear','Not-Available');
+
+INSERT INTO DRIVER_LANGUAGE
+	(LanguageCode, DriverLicenceNum)
+VALUE
+('A1','GB894571');
+('A2','BN793484');
+('A3','SP190239');
+('A4','CH792793';
+('A5','AU927991');
+
+INSERT INTO VEHICLE
+	(VIN, VEH_Make, VEH_Model, VEH_Colour, VEH_RegoNum,VEH_Availability, VEH_Odometer,  VEH_SeatCapacity)
+VALUES
+('SANFDAE11U1286116','Ford', 'Sedan', 'Red' , '123456', 'Available', 300, 4),
+('HJWDJU64347913400','Holden', 'SUV', 'Black' ,'666666','Available', 650, 5),
+('NLQWPONFW57358101','Toyota', '4X4', 'Silver' ,'543216','Not-Available', 700, 4),
+('BWKDIWDH581745235','Volkszwagen', 'Hybrid', 'Blue' , '789123','Available', 550, 4),
+('PEKRMG8768464848H','Nissan', 'Bus', 'White' , '764321', 'Available', 800, 9);
+
+INSERT INTO MAINTANANCE_REPAIR
+	(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Details)
+VALUES
+('SANFDAE11U1286116','Interior','2018-04-12','350','Maintenance'),
+('HJWDJU64347913400','Engine','2018-04-12','525','Maintenance'),
+('NLQWPONFW57358101','Cleaning','2018-04-12','1256','Repair'),
+('BWKDIWDH581745235','Air-Con','2018-04-12','750','Repair'),
+('PEKRMG8768464848H','Exaust','2018-04-12','900','Maintenace'); 
+
+INSERT INTO OFFICIAL
+	(OfficialID, LanguageCode, CountryCode, OfficialFirstName, OfficialLastName, OfficialRole)
+VALUES
+('F1','61','0514','Coach','John','Smith'),
+('F2','880','0214','Manager','Frank','Josh'),
+('F3','44','0514','Advisor','Denver','Huges'),
+('F4','1','0514','Referee','Sam','Farr'),
+('F5','81','1001','Physio','Andrew','Stevens');
+
+INSERT INTO OFFICIAL_ROLE
+	(RoleID, RoleDescription)
+VALUE
+('R1','Coach'),
+('R2','Manager'),
+('R3','Advisor'),
+('R4','Referee'),
+('R5','Physio');
+
+INSERT INTO TRIP
+(VIN, DriverLicenceNum, OfficialID, PickUpLocID, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM)
+
+VALUE
+    ('SANFDAE11U1286116', 'GB894571', '98765542', 2, 7, '2018-04-12 11:00:00' , '2018-04-12 14:05:00', '2018-04-12 11:45:00' , '2018-04-12 14:45:00', 300, 500);
+    ('HJWDJU64347913400', 'BN793484', '65713642', 9, 5, '2018-04-12 11:00:00' , '2018-04-12 14:05:00', '2018-04-12 11:45:00' , '2018-04-12 15:45:00', 650, 800);
+    ('NLQWPONFW57358101', 'SP190239', '31335542', 1, 8, '2018-04-12 11:00:00' , '2018-04-12 14:05:00', '2018-04-12 11:45:00' , '2018-04-12 14:45:00', 700, 950);
+    ('BWKDIWDH581745235', 'CH792793', '94656442', 3, 4, '2018-04-12 11:00:00' , '2018-04-12 14:05:00', '2018-04-12 11:45:00' , '2018-04-12 16:45:00', 550, 800);
+    ('PEKRMG8768464848H', 'AU927991', '68565542', 5, 9, '2018-04-12 11:00:00' , '2018-04-12 14:05:00', '2018-04-12 11:45:00' , '2018-04-12 16:45:00', 800, 1000);

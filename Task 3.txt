@@ -1,0 +1,32 @@
+1. a list of avaliable VEHICLES sorted according to SEATING CAPACITY.
+Display the MAKE, MODEL, REGO NUMBER, SEATING CAPACITY
+
+SELECT VEH_MAKE, VEH_MODEL, VEH_REGONUM, VEH_SEATCAPACITY AS "Query 1"
+FROM VEHICLE
+ORDER BY VEH_SEATCAPACITY DESC;
+b
+
+2. Find the LOCATIONS whose STREET NAMES consists of TWO OR MORE words. The LAST WORD is four characer long ending with a "d". Display the full street address
+
+SELECT StreetNo, StreetName, City AS "Query 2"
+FROM LOCATION
+WHERE  StreetName LIKE '% ' AND LIKE ' %' AND '___d';
+
+3. A list of OFFICIALS sorted according to their FirstName followed by LastName. Display their UFULL NAMES, COUNRTY NAMES, LANGUAGES THEY SPEAK
+
+SELECT OFFICIAL.OfficialFirstName, OFFICIAL.OfficialLastName, COUNTRY.CountryName, LANGUAGE.LanguageName AS "Query 3"
+FROM OFFICIAL, COUNTRY, LANGUAGE
+ORDER BY OFFICIAL.OfficialFirstName ASC, OFFICIAL.OfficialLastName ASC
+
+4. The DATE on which the MOST RECENT MAINTENENCE was done. Show the DATE as well as REGONUMBER, MAKE, MODEL.
+
+SELECT MAINTANANCE.MR_Date, VEHICLE.VEH_Make, VEHICLE.VEH_Model AS "Query 4"
+FROM MAINTANANCE, VEHICLE
+WHERE MAINTANANCE.MR_Date DESC
+
+5. List the DRIVERS who have DRIVEN more than 100KM in TOTAL. Display their full names and total kilometres travelled. Show the list SORTED BY total KM travelled.
+
+
+SELECT DRIVER.DriverFirstName, DRIVER.DriverLastName, TRIP.TotalKM
+FROM DRIVER, TRIP
+WHERE TRIP.TotalKM DESC
